@@ -36,7 +36,7 @@ def login():
 def loginvalid():
     username = request.form['username']
     password = request.form['password']
-    if username=="admin" and password=="asdf":
+    if username=="msdstds" and password=="jackmareddy420":
         user_pass[0] = username
         user_pass[1] = password
         return render_template('selection2.html')
@@ -170,7 +170,7 @@ def EMERGENCY():
 
 @app.route('/classify',methods = ["GET","POST"])
 def classify():
-    if user_pass[0]=="admin" and user_pass[1]=="asdf":
+    if user_pass[0]=="msdstds" and user_pass[1]=="jackmareddy420":
         action = request.form['regular']
         if action == 'regular':
             return render_template('selection1.html')
@@ -234,7 +234,7 @@ def back_up():
 
 @app.route('/exam',methods=["POST","GET"])
 def exam():
-    if user_pass[0]=="admin" and user_pass[1]=="asdf":
+    if user_pass[0]=="msdstds" and user_pass[1]=="jackmareddy420":
         a = request.form
         con = sql.connect("real1.db") 
         cur = con.cursor()
@@ -269,7 +269,7 @@ def create():
     time = []
     text = []
     bell = []
-    if user_pass[0]=="admin" and user_pass[1]=="asdf":
+    if user_pass[0]=="msdstds" and user_pass[1]=="jackmareddy420":
         if request.method=="POST":
             if request.form.get("external")=="submit":
                 data = request.form.to_dict(flat=False)
@@ -326,7 +326,7 @@ def create():
 
 @app.route('/clear',methods=["GET","POST"])
 def clear():
-    if user_pass[0]=="admin" and user_pass[1]=="asdf":
+    if user_pass[0]=="msdstds" and user_pass[1]=="jackmareddy420":
         try:
             con = sql.connect("real.db") 
             cur = con.cursor()
@@ -343,7 +343,7 @@ def clear():
 
 @app.route("/alarmschedule",methods=["GET","POST"])
 def alarmschedule():
-    if user_pass[0]=="admin" and user_pass[1]=="asdf":
+    if user_pass[0]=="msdstds" and user_pass[1]=="jackmareddy420":
         if request.method=="POST":
             if request.form.get("external")=="submit":
                 return redirect(url_for('create'))
